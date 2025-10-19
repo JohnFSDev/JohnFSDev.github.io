@@ -1,8 +1,10 @@
 // src/types/profile.ts
 import { StaticImageData } from 'next/image';
+import type { ReactElement } from "react";
 
 export interface Skill {
     readonly name: string;
+      icon?: ReactElement;
   }
   
   export interface Moment {
@@ -24,4 +26,5 @@ export interface Project {
   image: string; 
   liveLink: string; 
   githubLink: string; 
+  technologies?: string[];
 }

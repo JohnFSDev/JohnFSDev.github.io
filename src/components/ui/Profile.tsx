@@ -244,8 +244,9 @@ export function Profile({
                 {skills.map((skill) => (
                   <span
                     key={skill.name}
-                    className="px-3 py-1 bg-[#1E2124] text-gray-200 dark:text-white rounded-full text-sm border border-gray-700"
+                    className="flex items-center gap-2 px-3 py-1 bg-[#1E2124] text-gray-200 dark:text-white rounded-full text-sm border border-gray-700"
                   >
+                    {skill.icon}
                     {skill.name}
                   </span>
                 ))}
@@ -351,20 +352,45 @@ export function Profile({
                         <Image
                           src={project.image}
                           alt={project.title}
-                          layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-300 hover:scale-105"
+                          fill
                           priority
+                          style={{ objectFit: "cover" }}
+                          className="transition-transform duration-300 hover:scale-105"
                         />
                       </div>
+
                       <div className="p-6 space-y-3">
+                        {/* Título */}
                         <h4 className="text-lg font-semibold text-gray-200">
                           {project.title}
                         </h4>
+
+                        {/* Descripción */}
                         <p className="text-gray-400 text-sm">
                           {project.description}
                         </p>
-                        <div className="flex justify-center gap-4 pt-2">
+
+                        {/* ✅ Tecnologías usadas */}
+                        {project.technologies &&
+                          project.technologies.length > 0 && (
+                            <div className="flex flex-wrap gap-2 pt-2">
+                              {project.technologies.map((tech) => (
+                                <span
+                                  key={tech}
+                                  className="px-3 py-1 text-xs font-medium text-gray-200
+                   bg-gray-900/50 border border-gray-700/60 rounded-md 
+                   backdrop-blur-sm shadow-sm
+                   hover:bg-blue-600/20 hover:text-blue-300 
+                   transition-colors duration-200"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+
+                        {/* Enlaces */}
+                        <div className="flex justify-center gap-4 pt-3">
                           <a
                             href={project.githubLink}
                             target="_blank"
@@ -389,6 +415,7 @@ export function Profile({
                     </div>
                   ))}
               </div>
+
               {projects.length > 3 && (
                 <div className="flex justify-center pt-4">
                   <button
@@ -456,11 +483,9 @@ export function Profile({
                   quality={95}
                 />
               </div>
-
-              {/* Direct link with Lucide icon */}
               <div className="text-center">
                 <a
-                  href="https://tusitio.com/certifications" // <-- reemplaza con tu URL real
+                  href="https://drive.google.com/drive/folders/1vctsONMMbGc-RGchxQi-hx_rd7m0Pecl?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:underline text-sm"
