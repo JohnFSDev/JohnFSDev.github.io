@@ -36,7 +36,7 @@ const moments: Moment[] = [
   },
   {
     title: "Final Degree Project Presentation – WithYou",
-    date: "2024",
+    date: "2025",
     description:
       "Successfully presented my final degree project, 'WithYou', a web platform for online psychological consulting services. The project integrated modern web technologies with a focus on accessibility, user experience, and data security.",
     image: "/imgs/finalproject.webp",
