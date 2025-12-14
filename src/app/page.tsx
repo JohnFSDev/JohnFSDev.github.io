@@ -46,7 +46,7 @@ const workExperience: WorkExperience[] = [
   {
     id: 2,
     company: "Singularitytech",
-    position: "Application Development Engineer",
+    position: "Application Development Engineer - Freelance",
     location: "Santo Domingo, Dominican Republic", 
     period: "Jul 2024 – Present",
     description: [
