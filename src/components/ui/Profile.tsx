@@ -314,9 +314,9 @@ export function Profile({
                         {experience.description.map((item, index) => (
                           <li
                             key={index}
-                            className="text-gray-300 text-sm flex items-start gap-3 leading-relaxed"
+                            className="text-gray-300 text-sm flex items-center gap-3 leading-relaxed"
                           >
-                            <span className="text-blue-400 mt-1.5 text-xs flex-shrink-0">
+                            <span className="text-blue-400 text-xs flex-shrink-0">
                               ●
                             </span>
                             <span className="flex-1">{item}</span>
