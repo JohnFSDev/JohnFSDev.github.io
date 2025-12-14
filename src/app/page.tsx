@@ -2,7 +2,7 @@
 "use client";
 
 import { Profile } from "@/components/ui/Profile";
-import type { SocialLink, Skill, Moment, Project } from "@/types/profile";
+import type { SocialLink, Skill, Moment, Project, WorkExperience } from "@/types/profile";
 import { Database, Code, Server, BarChart3, Wrench, FileCode } from "lucide-react";
 
 const email = "johnluis22@outlook.com";
@@ -26,6 +26,51 @@ const skills: Skill[] = [
   { name: "JavaScript", icon: <FileCode className="w-5 h-5 text-yellow-400" />,},
   { name: "NodeJS", icon: <Server className="w-5 h-5 text-green-500" /> },
 ];
+
+const workExperience: WorkExperience[] = [
+  {
+    id: 1,
+    company: "Claro Dom",
+    position: "Data Engineer",
+    location: "Santo Domingo, Dominican Republic",
+    period: "Mar 2025 – Present",
+    description: [
+      "Participate in the design, development and maintenance of data pipelines and backend services for internal applications",
+      "Implement data extraction, transformation and loading (ETL) using Python, SQL and automation tools",
+      "Build data models and queries for reporting, monitoring and performance analysis",
+      "Support deployment, troubleshooting and documentation of applications in Agile teams",
+      "Perform database integration and optimization with OracleDB, SQL Server"
+    ],
+    technologies: ["Python", "SQL", "ETL", "OracleDB", "SQL Server", "Excel", "Putty"]
+  },
+  {
+    id: 2,
+    company: "Singularitytech",
+    position: "Application Development Engineer",
+    location: "Santo Domingo, Dominican Republic", 
+    period: "Jul 2024 – Present",
+    description: [
+      "Designed and developed web applications and APIs using modern frameworks and best practices",
+      "Implemented data models, business logic, and cloud deployment workflows",
+      "Delivered automation solutions to optimize processes and improve performance"
+    ],
+    technologies: ["Web Development", "APIs", "Python", "Django", "CI/CD", "SQL Lite"]
+  },
+  {
+    id: 3,
+    company: "F2TC",
+    position: "Software Engineering Intern",
+    location: "Santo Domingo, Dominican Republic",
+    period: "Sep 2021 – Oct 2021",
+    description: [
+      "Built and maintained web pages using JavaScript, HTML and CSS, improving usability and responsiveness",
+      "Implemented components in React to enhance UI functionality",
+      "Gained experience in version control, collaborative workflows, and software deployment"
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Git"]
+  }
+];
+
 const moments: Moment[] = [
   {
     title: "Graduation as Software Engineer – INTEC",
@@ -107,7 +152,8 @@ const mockData = {
   moments,
   socialLinks,
   projects,
-  email,
+  workExperience,
+  email
 };
 
 export default function Home() {
@@ -118,6 +164,7 @@ export default function Home() {
       socialLinks={mockData.socialLinks}
       projects={mockData.projects}
       email={mockData.email}
+      workExperience={mockData.workExperience}
     />
   );
 }

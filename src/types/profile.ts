@@ -28,3 +28,14 @@ export interface Project {
   githubLink: string; 
   technologies?: string[];
 }
+
+export interface WorkExperience {
+  id: number;
+  company: string;
+  position: string;
+  location: string;
+  period: string;
+  description: string[];
+  technologies?: string[];
+  logo?: string;
+}
