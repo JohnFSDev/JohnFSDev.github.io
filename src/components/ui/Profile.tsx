@@ -561,14 +561,22 @@ export function Profile({
 
               {/* QR Code */}
               <div className="w-48 h-48 bg-gray-100 rounded-lg mx-auto mb-4">
-                <Image
-                  src="/imgs/certifications_qr.webp"
-                  alt="My Certifications QR Code"
-                  width={192}
-                  height={192}
-                  className="w-full h-full object-contain rounded-lg"
-                  quality={95}
-                />
+                <a
+                  href="https://drive.google.com/drive/folders/1vctsONMMbGc-RGchxQi-hx_rd7m0Pecl?usp=drive_link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Ver certificados online"
+                  className="block w-full h-full"
+                >
+                  <Image
+                    src="/imgs/certifications_qr.webp"
+                    alt="My Certifications QR Code"
+                    width={192}
+                    height={192}
+                    className="w-full h-full object-contain rounded-lg"
+                    quality={95}
+                  />
+                </a>
               </div>
               <div className="text-center">
                 <a
